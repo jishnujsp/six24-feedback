@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>SIX24 · Tester feedback</title>
+  <meta name="description" content="Share your feedback on SIX24, the Human Operations System.">
+  <meta name="theme-color" content="#F7F6F2">
+  <!-- Link preview for WhatsApp / Slack -->
+  <meta property="og:title" content="SIX24 · Tester feedback">
+  <meta property="og:description" content="Tried SIX24? Tell us what worked and what didn't. Takes about 4 minutes.">
+  <meta property="og:url" content="https://feedback.six24.in">
+  <style>
+    html, body { margin: 0; height: 100%; background: #F7F6F2; overflow: hidden; }
+    @media (prefers-color-scheme: dark) { html, body { background: #111318; } }
+    iframe { position: fixed; inset: 0; width: 100%; height: 100%; border: 0; display: block; }
+  </style>
+</head>
+<body>
+  <iframe id="app" title="SIX24 feedback"
+    src="https://script.google.com/macros/s/AKfycbxqffcLTh_AuyBtzqMD4aLcVXWcYCjnSFvIIpWE0X-MxOMPyXwqaGKkU8FFIcvE5SNJ/exec"
+    allow="clipboard-read; clipboard-write; fullscreen"
+    allowfullscreen></iframe>
+  <script>
+    // Pass prefill links through, e.g. feedback.six24.in/?name=Bruce%20Wayne&email=bruce@dc.test&src=whatsapp
+    if (location.search) {
+      var f = document.getElementById('app');
+      f.src = f.src.split('?')[0] + location.search;
+    }
+  </script>
+</body>
+</html>
